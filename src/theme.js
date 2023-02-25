@@ -66,5 +66,5 @@ export default BadgesColors = (mode) => ({
           900: "#151632",
         },
       }
-    : {}),
+    : ),
 });
