@@ -1,13 +1,10 @@
-import {
-  createContext,
-  useState,
-  useMemo,
-} from "@mui/material/styles/createTransitions";
-import { createTheme } from "@mui/material/Styles";
+import { createContext, useState, useMemo } from "react";
+import { createTheme } from "@mui/material/styles";
+
 
 //colors design badges
 
-export default BadgesColors = (mode) => ({
+export const tokens = (mode) => ({
   ...(mode === "dark"
     ? {
         grey: {
