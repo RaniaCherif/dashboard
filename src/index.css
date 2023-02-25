@@ -9,3 +9,8 @@ body,
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
 }
+
+.app {
+  display: flex;
+  position: relative;
+}
