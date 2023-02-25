@@ -79,7 +79,7 @@ const SideBar = () => {
                 ml="15px"
               >
                 <Typography variant="h3" color={colors.grey[100]}>
-                  CONNECTED
+                  ADMINIS
                 </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
@@ -106,10 +106,10 @@ const SideBar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Rania Cherif
+                  Ed Roh
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  vp consultant
+                  VP Fancy Admin
                 </Typography>
               </Box>
             </Box>
@@ -129,7 +129,7 @@ const SideBar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Details
+              Data
             </Typography>
             <Item
               title="Manage Team"
@@ -158,7 +158,7 @@ const SideBar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              Fragments
+              Pages
             </Typography>
             <Item
               title="Profile Form"
@@ -187,7 +187,7 @@ const SideBar = () => {
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
             >
-              ECharts
+              Charts
             </Typography>
             <Item
               title="Bar Chart"
