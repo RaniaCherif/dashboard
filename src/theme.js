@@ -4,7 +4,6 @@ import {
   useMemo,
 } from "@mui/material/styles/createTransitions";
 import { createTheme } from "@mui/material/Styles";
-import { color } from "@mui/system";
 
 //colors design badges
 
@@ -83,7 +82,7 @@ export default BadgesColors = (mode) => ({
           100: "#d3eafd",
           200: "#a6d5fa",
           300: "#7ac0f8",
-          400: "#4dabf5",
+          400: "#f2f0f0",
           500: "#2196f3",
           600: "#1a78c2",
           700: "#145a92",
