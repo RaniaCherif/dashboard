@@ -4,13 +4,14 @@ import {
   useMemo,
 } from "@mui/material/styles/createTransitions";
 import { createTheme } from "@mui/material/Styles";
+import { color } from "@mui/system";
 
 //colors design badges
 
 export default BadgesColors = (mode) => ({
   ...(mode === "dark"
     ? {
-        gray: {
+        grey: {
           900: "#141414",
           800: "#292929",
           700: "#3d3d3d",
@@ -67,7 +68,7 @@ export default BadgesColors = (mode) => ({
         },
       }
     : {
-        gray: {
+        grey: {
           100: "#141414",
           200: "#292929",
           300: "#3d3d3d",
@@ -124,3 +125,76 @@ export default BadgesColors = (mode) => ({
         },
       }),
 });
+
+         // mui theme settings
+export const themeSettings = (mode) => {
+  const colors = tokens(mode);
+  return {
+    palette: {
+      mode: mode,
+      ...(mode === "dark"
+        ? {
+            // palette values for dark mode
+            primary: {
+              main: colors.primary[500],
+            },
+            secondary: {
+              main: colors.greenAccent[500],
+            },
+            neutral: {
+              dark: colors.grey[700],
+              main: colors.grey[500],
+              light: colors.grey[100],
+            },
+            background: {
+              default: colors.primary[500],
+            },
+          }
+        : {
+            // palette values for light mode
+            primary: {
+              main: colors.primary[100],
+            },
+            secondary: {
+              main: colors.greenAccent[500],
+            },
+            neutral: {
+              dark: colors.grey[700],
+              main: colors.grey[500],
+              light: colors.grey[100],
+            },
+            background: {
+              default: "#fcfcfc",
+            },
+          }),
+    },
+    typography: {
+      fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+      fontSize: 12,
+      h1: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 40,
+      },
+      h2: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 32,
+      },
+      h3: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 24,
+      },
+      h4: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 20,
+      },
+      h5: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 16,
+      },
+      h6: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontSize: 14,
+      },
+    },
+  };
+};
