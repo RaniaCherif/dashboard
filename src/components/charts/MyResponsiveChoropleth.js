@@ -2,6 +2,7 @@
 // yarn add @nivo/core @nivo/geo
 import { ResponsiveChoropleth } from "@nivo/geo";
 import world from "../../data/world_countries.json";
+import { animated, useSpring, useSpringValue } from "@react-spring/core";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
@@ -9,7 +10,36 @@ import world from "../../data/world_countries.json";
 // website examples showcase many properties,
 // you'll often use just a few of them.
 const MyResponsiveChoropleth = ({ data }) => {
+
   let worldFeatures = world.features;
+  //const x=90;
+
+  /*const x = useSpringValue(0);
+  x.start(1);*/
+
+   const [x, set, stop, api] = useSpring(() => ({
+    loop: true,
+    from: {
+      x: 0,
+    },
+    to: {
+      x: 360,
+    },
+    delay: 100,
+  }));
+
+  //api.start({ x:0});
+
+  /*useSpring({
+    loop: true,
+    from: {
+      x: 0,
+    },
+    to: {
+      x: 360,
+    },
+    delay: 100,
+  });*/
 
   return (
     <div style={{ width: "250px", height: "250px" }}>
@@ -24,7 +54,7 @@ const MyResponsiveChoropleth = ({ data }) => {
         valueFormat=".2s"
         projectionType="orthographic"
         projectionTranslation={[0.5, 0.5]}
-        projectionRotation={[-49, 0, 0]}
+        projectionRotation={[ x , 0, 0]}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
         borderWidth={0.5}
