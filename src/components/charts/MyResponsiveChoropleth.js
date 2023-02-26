@@ -1,7 +1,7 @@
 // install (please make sure versions match peerDependencies)
 // yarn add @nivo/core @nivo/geo
 import { ResponsiveChoropleth } from "@nivo/geo";
-import world from "./world_countries.json";
+import world from "../../data/world_countries.json";
 
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
@@ -10,6 +10,7 @@ import world from "./world_countries.json";
 // you'll often use just a few of them.
 const MyResponsiveChoropleth = ({ data }) => {
   let worldFeatures = world.features;
+
   return (
     <div style={{ width: "250px", height: "250px" }}>
       <ResponsiveChoropleth

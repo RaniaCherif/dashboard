@@ -9,6 +9,7 @@ import { ResponsiveRadialBar } from "@nivo/radial-bar";
 // you'll often use just a few of them.
 
 const MyResponsiveRadialBar = ({ data /* see data tab */ }) => (
+  
   <div style={{ width: "220px", height: "170px" }}>
     <ResponsiveRadialBar
       data={data}

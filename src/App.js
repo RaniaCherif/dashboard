@@ -10,8 +10,8 @@ import {
   radialData2,
   radialData3,
   radialData4,
-} from "./components/charts/data";
-import { earthData } from "./components/charts/earthData";
+} from "./data/chartData_Radial";
+import { earthData } from "./data/chartData_EarthData";
 import MyResponsiveChoropleth from "./components/charts/MyResponsiveChoropleth";
 
 function App() {
