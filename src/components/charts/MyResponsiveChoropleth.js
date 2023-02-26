@@ -54,7 +54,7 @@ const MyResponsiveChoropleth = ({ data }) => {
         valueFormat=".2s"
         projectionType="orthographic"
         projectionTranslation={[0.5, 0.5]}
-        projectionRotation={[ x , 0, 0]}
+        projectionRotation={[ 0 , 0, 0]}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
         borderWidth={0.5}

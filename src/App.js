@@ -13,6 +13,10 @@ import {
 } from "./data/chartData_Radial";
 import { earthData } from "./data/chartData_EarthData";
 import MyResponsiveChoropleth from "./components/charts/MyResponsiveChoropleth";
+import { LineData } from "./data/chartData_LineData";
+import LineChart from "./components/charts/LineChart";
+import { RadarData } from "./data/chartData_RadarData";
+import RadarChart from "./components/charts/RadarChart";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -26,7 +30,7 @@ function App() {
             {/*<SideBar />*/}
             <main className="content">
               <TopBar setIsSidebar={setIsSidebar} />
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
                 <MyResponsiveRadialBar
                   data={radialData}
                 ></MyResponsiveRadialBar>
@@ -43,6 +47,8 @@ function App() {
                 <MyResponsiveChoropleth
                   data={earthData}
                 ></MyResponsiveChoropleth>
+                <LineChart data={LineData}> </LineChart>
+                <RadarChart data={RadarData}></RadarChart>
               </div>
             </main>
           </div>
