@@ -5,7 +5,14 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import { useState } from "react";
 import MyResponsiveRadialBar from "./components/charts/MyResponsiveRadialBar";
-import { radialData, radialData2, radialData3, radialData4 } from "./components/charts/data";
+import {
+  radialData,
+  radialData2,
+  radialData3,
+  radialData4,
+} from "./components/charts/data";
+import { earthData } from "./components/charts/earthData";
+import MyResponsiveChoropleth from "./components/charts/MyResponsiveChoropleth";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -32,6 +39,10 @@ function App() {
                 <MyResponsiveRadialBar
                   data={radialData4}
                 ></MyResponsiveRadialBar>
+
+                <MyResponsiveChoropleth
+                  data={earthData}
+                ></MyResponsiveChoropleth>
               </div>
             </main>
           </div>
