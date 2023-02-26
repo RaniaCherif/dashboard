@@ -30,3 +30,9 @@ body,
 ::-webkit-scrollbar-track:hover {
   background: #555;
 }
+
+
+text{
+  fill:rgb(10, 134, 112) !important;
+  font-size: 0.5rem !important;
+}
