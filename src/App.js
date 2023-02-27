@@ -4,7 +4,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import { useState } from "react";
-import MyResponsiveRadialBar from "./components/charts/MyResponsiveRadialBar";
+import RadialBarChart from "./components/charts/RadialBarChart";
 import {
   radialData,
   radialData2,
@@ -12,8 +12,7 @@ import {
   radialData4,
 } from "./data/chartData_Radial";
 import { earthData } from "./data/chartData_EarthData";
-import MyResponsiveChoropleth from "./components/charts/MyResponsiveChoropleth";
-
+import EarthChart from "./components/charts/EarthChart";
 import { RadarData } from "./data/chartData_RadarData";
 import RadarChart from "./components/charts/RadarChart";
 import { PieData } from "./data/ChartData_PieData";
@@ -35,15 +34,10 @@ function App() {
               <TopBar setIsSidebar={setIsSidebar} />
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
-                <MyResponsiveRadialBar
-                  data={radialData}
-                ></MyResponsiveRadialBar>
-
-                <MyResponsiveChoropleth
-                  data={earthData}
-                ></MyResponsiveChoropleth>
+                <RadialBarChart data={radialData}></RadialBarChart>
                 <RadarChart data={RadarData}></RadarChart>
                 <PieChart data={PieData}></PieChart>
+                <EarthChart data={earthData}></EarthChart>
                 <ContainerLine></ContainerLine>
               </Box>
             </main>

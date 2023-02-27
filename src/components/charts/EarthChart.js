@@ -1,23 +1,15 @@
-// install (please make sure versions match peerDependencies)
-// yarn add @nivo/core @nivo/geo
 import { ResponsiveChoropleth } from "@nivo/geo";
 import world from "../../data/world_countries.json";
 import { animated, useSpring, useSpringValue } from "@react-spring/core";
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-const MyResponsiveChoropleth = ({ data }) => {
-
+const EarthChart = ({ data }) => {
   let worldFeatures = world.features;
   //const x=90;
 
   /*const x = useSpringValue(0);
   x.start(1);*/
 
-   const [x, set, stop, api] = useSpring(() => ({
+  const [x, set, stop, api] = useSpring(() => ({
     loop: true,
     from: {
       x: 0,
@@ -54,7 +46,7 @@ const MyResponsiveChoropleth = ({ data }) => {
         valueFormat=".2s"
         projectionType="orthographic"
         projectionTranslation={[0.5, 0.5]}
-        projectionRotation={[ 0 , 0, 0]}
+        projectionRotation={[0, 0, 0]}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
         borderWidth={0.5}
@@ -143,4 +135,4 @@ const MyResponsiveChoropleth = ({ data }) => {
   );
 };
 
-export default MyResponsiveChoropleth;
+export default EarthChart;

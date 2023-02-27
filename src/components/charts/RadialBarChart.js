@@ -1,15 +1,6 @@
-// install (please make sure versions match peerDependencies)
-// yarn add @nivo/core @nivo/radial-bar
 import { ResponsiveRadialBar } from "@nivo/radial-bar";
 
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
-
-const MyResponsiveRadialBar = ({ data /* see data tab */ }) => (
-  
+const RadialBarChart = ({ data /* see data tab */ }) => (
   <div style={{ width: "220px", height: "170px" }}>
     <ResponsiveRadialBar
       data={data}
@@ -48,4 +39,4 @@ const MyResponsiveRadialBar = ({ data /* see data tab */ }) => (
     />
   </div>
 );
-export default MyResponsiveRadialBar;
+export default RadialBarChart;

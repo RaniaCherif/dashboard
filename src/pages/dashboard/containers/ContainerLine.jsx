@@ -1,9 +1,12 @@
 import LineChart from "../../../components/charts/LineChart";
 import { Box } from "@mui/system";
 import { LineData } from "../../../data/chartData_LineData";
+import "./dashboard.css";
+
 const ContainerLine = () => {
   return (
-    <Box sx={{ boxShadow: "10px 10px 12px -6px black" ,borderRadius:"2rem" } }>
+    <Box className="Container_Base">
+
       <LineChart data={LineData}></LineChart>
     </Box>
   );
