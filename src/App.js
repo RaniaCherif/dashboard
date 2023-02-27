@@ -8,11 +8,10 @@ import ContainerRadialBarChart from "./pages/dashboard/containers/ContainerRadia
 import ContainerRadar from "./pages/dashboard/containers/ContainerRadar";
 import { earthData } from "./data/chartData_EarthData";
 import EarthChart from "./components/charts/EarthChart";
-import RadarChart from "./components/charts/RadarChart";
-import { PieData } from "./data/ChartData_PieData";
-import PieChart from "./components/charts/PieChart";
+import ContainerPie from "./pages/dashboard/containers/ContainerPie";
 import { Box } from "@mui/system";
 import ContainerLine from "./pages/dashboard/containers/ContainerLine";
+import ContainerEarth from "./pages/dashboard/containers/ContainerEarth";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,11 +27,11 @@ function App() {
               <TopBar setIsSidebar={setIsSidebar} />
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
-                <ContainerRadialBarChart ></ContainerRadialBarChart>
+                <ContainerRadialBarChart></ContainerRadialBarChart>
                 <ContainerRadar></ContainerRadar>
-                <PieChart data={PieData}></PieChart>
-                <EarthChart data={earthData}></EarthChart>
                 <ContainerLine></ContainerLine>
+                <ContainerPie></ContainerPie>
+                <ContainerEarth></ContainerEarth>
               </Box>
             </main>
           </div>
@@ -43,4 +42,3 @@ function App() {
 }
 
 export default App;
- 

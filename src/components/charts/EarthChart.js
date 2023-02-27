@@ -1,5 +1,6 @@
 import { ResponsiveChoropleth } from "@nivo/geo";
 import world from "../../data/world_countries.json";
+import { Box } from "@mui/system";
 import { animated, useSpring, useSpringValue } from "@react-spring/core";
 
 const EarthChart = ({ data }) => {
@@ -34,11 +35,11 @@ const EarthChart = ({ data }) => {
   });*/
 
   return (
-    <div style={{ width: "250px", height: "250px" }}>
+    <Box width={300} height={240}>
       <ResponsiveChoropleth
         data={data}
         features={worldFeatures}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        margin={{ top: 0, right:150, bottom: 0, left: 0 }}
         colors="PuOr"
         domain={[0, 1000000]}
         unknownColor="#666666"
@@ -110,8 +111,8 @@ const EarthChart = ({ data }) => {
             anchor: "bottom-left",
             direction: "column",
             justify: true,
-            translateX: 20,
-            translateY: -100,
+            translateX: 5,
+            translateY: -40,
             itemsSpacing: 0,
             itemWidth: 94,
             itemHeight: 18,
@@ -131,7 +132,7 @@ const EarthChart = ({ data }) => {
           },
         ]}
       />
-    </div>
+    </Box>
   );
 };
 
