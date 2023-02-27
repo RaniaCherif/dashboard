@@ -5,9 +5,9 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import { useState } from "react";
 import ContainerRadialBarChart from "./pages/dashboard/containers/ContainerRadialBarChart";
+import ContainerRadar from "./pages/dashboard/containers/ContainerRadar";
 import { earthData } from "./data/chartData_EarthData";
 import EarthChart from "./components/charts/EarthChart";
-import { RadarData } from "./data/chartData_RadarData";
 import RadarChart from "./components/charts/RadarChart";
 import { PieData } from "./data/ChartData_PieData";
 import PieChart from "./components/charts/PieChart";
@@ -29,7 +29,7 @@ function App() {
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
                 <ContainerRadialBarChart ></ContainerRadialBarChart>
-                <RadarChart data={RadarData}></RadarChart>
+                <ContainerRadar></ContainerRadar>
                 <PieChart data={PieData}></PieChart>
                 <EarthChart data={earthData}></EarthChart>
                 <ContainerLine></ContainerLine>
@@ -43,3 +43,4 @@ function App() {
 }
 
 export default App;
+ 
