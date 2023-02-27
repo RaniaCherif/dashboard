@@ -6,12 +6,12 @@ import { ProSidebarProvider } from "react-pro-sidebar";
 import { useState } from "react";
 import ContainerRadialBarChart from "./pages/dashboard/containers/ContainerRadialBarChart";
 import ContainerRadar from "./pages/dashboard/containers/ContainerRadar";
-import { earthData } from "./data/chartData_EarthData";
-import EarthChart from "./components/charts/EarthChart";
+import ContainerFunnel from "./pages/dashboard/containers/ContainerFunnel";
 import ContainerPie from "./pages/dashboard/containers/ContainerPie";
 import { Box } from "@mui/system";
 import ContainerLine from "./pages/dashboard/containers/ContainerLine";
 import ContainerEarth from "./pages/dashboard/containers/ContainerEarth";
+import Container1 from "./pages/dashboard/containers/Container1";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -27,11 +27,13 @@ function App() {
               <TopBar setIsSidebar={setIsSidebar} />
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
+                <Container1></Container1>
                 <ContainerRadialBarChart></ContainerRadialBarChart>
                 <ContainerRadar></ContainerRadar>
                 <ContainerLine></ContainerLine>
                 <ContainerPie></ContainerPie>
                 <ContainerEarth></ContainerEarth>
+                <ContainerFunnel></ContainerFunnel>
               </Box>
             </main>
           </div>

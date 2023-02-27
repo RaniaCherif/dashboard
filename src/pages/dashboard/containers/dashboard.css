@@ -1,6 +1,6 @@
 .Container_Base {
-  box-shadow: 18px 18px 10px -6px black;
-  border-radius: 2rem;
+  box-shadow: 20px 20px 20px -10px black;
+  border-radius: 1rem;
   text-align: center;
   text-justify: auto;
 }
@@ -13,15 +13,30 @@
 
 .Container_Line h1 {
   font-size: 15px;
-  color: rgb(255, 204, 0);
   margin: 0;
   padding: 0;
 
 }
 
 .Container_Line h2 {
-  font-size: 7.5px;
-  color: chartreuse;
+  font-size: 20px;
+  
   margin: auto 0;
   padding: 0;
+}
+.Container_Line h3 {
+  font-size: 10px;
+  color: #808080;
+ 
+}
+.Container_Line h5 {
+  font-size: 10px;
+  color: #808080;
+ 
+}
+.Container_Line span {
+  font-size: 10px;
+  color: #357a38
+;
+
 }

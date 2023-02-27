@@ -1,12 +1,12 @@
-import LineChart from "../../../components/charts/LineChart";
+import FunnelEchart from "../../../components/charts/FunnelEchart";
 import { Box } from "@mui/system";
-import { LineData } from "../../../data/chartData_LineData";
+import { funnelData } from "../../../data/chartData_FunnelData";
 import "./dashboard.css";
 
 const ContainerLine = () => {
   return (
     <Box className="Container_Base  Container_Line">
-      <LineChart data={LineData}></LineChart>
+      <FunnelEchart data={funnelData}></FunnelEchart>
     </Box>
   );
 };

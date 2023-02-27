@@ -1,45 +1,55 @@
+
 import { ResponsiveChoropleth } from "@nivo/geo";
 import world from "../../data/world_countries.json";
 import { Box } from "@mui/system";
-import { animated, useSpring, useSpringValue } from "@react-spring/core";
+import { animated, useSpring, config } from "@react-spring/web";
+import { useEffect, useState } from "react";
+
+
+//const Earth = animated(ResponsiveChoropleth);
 
 const EarthChart = ({ data }) => {
   let worldFeatures = world.features;
-  //const x=90;
 
-  /*const x = useSpringValue(0);
-  x.start(1);*/
-
-  const [x, set, stop, api] = useSpring(() => ({
+  /*const props = useSpring({
+    val: 360,
+    config: { duration: 10000 },
+    from: { val: 0 },
     loop: true,
-    from: {
-      x: 0,
-    },
-    to: {
-      x: 360,
-    },
-    delay: 100,
-  }));
-
-  //api.start({ x:0});
-
-  /*useSpring({
-    loop: true,
-    from: {
-      x: 0,
-    },
-    to: {
-      x: 360,
-    },
-    delay: 100,
+    reset: true,
   });*/
+
+  const t=ResponsiveChoropleth;
+
+  const [timeLeft, setTimeLeft] = useState(0);
+  const [rotation, setRotation] = useState([0, 0, 0]);
+
+  useEffect(() => {
+    // exit early when we reach 0
+    if (timeLeft === 360) setTimeLeft(0);
+
+    // save intervalId to clear the interval when the
+    // component re-renders
+    const intervalId = setInterval(() => {
+      setTimeLeft(timeLeft + 1);
+      setRotation([timeLeft,0,0]);
+      this.forceUpdate();
+    }, 10);
+
+    // clear interval on re-render to avoid memory leaks
+    return () => clearInterval(intervalId);
+    // add timeLeft as a dependency to re-rerun the effect
+    // when we update it
+  }, [timeLeft]);
 
   return (
     <Box width={300} height={240}>
+      <div>{timeLeft}</div>
       <ResponsiveChoropleth
+        forceUpdate
         data={data}
         features={worldFeatures}
-        margin={{ top: 0, right:150, bottom: 0, left: 0 }}
+        margin={{ top: 0, right: 150, bottom: 0, left: 0 }}
         colors="PuOr"
         domain={[0, 1000000]}
         unknownColor="#666666"
@@ -47,7 +57,7 @@ const EarthChart = ({ data }) => {
         valueFormat=".2s"
         projectionType="orthographic"
         projectionTranslation={[0.5, 0.5]}
-        projectionRotation={[0, 0, 0]}
+        projectionRotation={rotation}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
         borderWidth={0.5}
