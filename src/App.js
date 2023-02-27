@@ -13,12 +13,13 @@ import {
 } from "./data/chartData_Radial";
 import { earthData } from "./data/chartData_EarthData";
 import MyResponsiveChoropleth from "./components/charts/MyResponsiveChoropleth";
-import { LineData } from "./data/chartData_LineData";
-import LineChart from "./components/charts/LineChart";
+
 import { RadarData } from "./data/chartData_RadarData";
 import RadarChart from "./components/charts/RadarChart";
 import { PieData } from "./data/ChartData_PieData";
 import PieChart from "./components/charts/PieChart";
+import { Box } from "@mui/system";
+import ContainerLine from "./pages/dashboard/containers/ContainerLine";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -32,27 +33,19 @@ function App() {
             {/*<SideBar />*/}
             <main className="content">
               <TopBar setIsSidebar={setIsSidebar} />
-              <div style={{ display: "flex", flexWrap: "wrap" }}>
+
+              <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
                 <MyResponsiveRadialBar
                   data={radialData}
-                ></MyResponsiveRadialBar>
-                <MyResponsiveRadialBar
-                  data={radialData2}
-                ></MyResponsiveRadialBar>
-                <MyResponsiveRadialBar
-                  data={radialData3}
-                ></MyResponsiveRadialBar>
-                <MyResponsiveRadialBar
-                  data={radialData4}
                 ></MyResponsiveRadialBar>
 
                 <MyResponsiveChoropleth
                   data={earthData}
                 ></MyResponsiveChoropleth>
-                <LineChart data={LineData}> </LineChart>
                 <RadarChart data={RadarData}></RadarChart>
                 <PieChart data={PieData}></PieChart>
-              </div>
+                <ContainerLine></ContainerLine>
+              </Box>
             </main>
           </div>
         </ProSidebarProvider>
