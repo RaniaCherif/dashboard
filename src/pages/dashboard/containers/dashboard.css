@@ -1,4 +1,34 @@
-.Container_Base{
-    box-Shadow: 10px 10px 12px -6px black;
-     border-Radius: 2rem ;
+.Container_Base {
+  box-shadow: 18px 18px 10px -6px black;
+  border-radius: 2rem;
+  text-align: center;
+  text-justify: auto;
+}
+
+.Container_Line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Container_Line h1 {
+  font-size: 18px;
+  color: rgb(255, 204, 0);
+  margin: 0;
+  padding: 0;
+
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+.Container_Line h2 {
+  font-size: 9px;
+  color: chartreuse;
+  margin: auto 0;
+  padding: 0;
+
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: 100px;
 }

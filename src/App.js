@@ -4,13 +4,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import { useState } from "react";
-import RadialBarChart from "./components/charts/RadialBarChart";
-import {
-  radialData,
-  radialData2,
-  radialData3,
-  radialData4,
-} from "./data/chartData_Radial";
+import ContainerRadialBarChart from "./pages/dashboard/containers/ContainerRadialBarChart";
 import { earthData } from "./data/chartData_EarthData";
 import EarthChart from "./components/charts/EarthChart";
 import { RadarData } from "./data/chartData_RadarData";
@@ -34,7 +28,7 @@ function App() {
               <TopBar setIsSidebar={setIsSidebar} />
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
-                <RadialBarChart data={radialData}></RadialBarChart>
+                <ContainerRadialBarChart ></ContainerRadialBarChart>
                 <RadarChart data={RadarData}></RadarChart>
                 <PieChart data={PieData}></PieChart>
                 <EarthChart data={earthData}></EarthChart>
