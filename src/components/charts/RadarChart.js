@@ -2,7 +2,7 @@ import { ResponsiveRadar } from "@nivo/radar";
 import { Box } from "@mui/system";
 
 const RadarChart = ({ data /* see data tab */ }) => (
-  <Box width={270} height={170}>
+  <Box width={270} height={160}>
     <ResponsiveRadar
       data={data}
       keys={["chardonay", "carmenere", "syrah"]}

@@ -7,15 +7,16 @@ const Container3 = () => {
     <Box
       className="Container_Base Container_Line"
       width={"200px"}
-      height={"75px"}
+      height={"65px"}
     >
       <Box
         display={"flex"}
         flexDirection={"column"}
         flexWrap={"nowrap"}
+        justifyContent={"center"}
         alignItems={"flex-start"}
         width={"120px"}
-        height={"70px"}
+        height={"65px"}
       >
         <h2 style={{ marginBottom: "0.25rem", fontSize: "10px" }}>Purchase</h2>
         <h1>
@@ -28,8 +29,7 @@ const Container3 = () => {
       <DiamondOutlinedIcon
         sx={{
           fontSize: 40,
-          alignSelf: "end",
-          marginBottom: "2rem",
+          alignSelf: "center",
           fill: "#6d1b7b",
         }}
       ></DiamondOutlinedIcon>

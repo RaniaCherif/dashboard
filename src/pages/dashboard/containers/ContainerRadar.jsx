@@ -8,7 +8,7 @@ const ContainerRadar = () => {
     <Box
       className="Container_Base Container_Line"
       width={"300px"}
-      height={"170px"}
+      height={"160px"}
     >
       <RadarChart data={RadarData}></RadarChart>
     </Box>

@@ -37,6 +37,7 @@ function App() {
                   flexWrap={"wrap"}
                   alignContent={"flex-start"}
                   width={"310px"}
+                  gap={1}
                 >
                   <Container1></Container1>
                   <Container2></Container2>
