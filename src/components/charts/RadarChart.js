@@ -8,7 +8,7 @@ const RadarChart = ({ data /* see data tab */ }) => (
       keys={["chardonay", "carmenere", "syrah"]}
       indexBy="taste"
       valueFormat=">-.2f"
-      margin={{ top: 20, right: -60, bottom: 5, left: 8 }}
+      margin={{ top: 30, right: -60, bottom: 15, left: 8 }}
       borderColor={{ from: "color", modifiers: [] }}
       gridLevels={4}
       gridShape="linear"

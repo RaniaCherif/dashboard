@@ -8,7 +8,7 @@ const ContainerPie = () => {
     <Box
       className="Container_Base Container_Line"
       width={"300px"}
-      height={"200px"}
+      height={"220px"}
     >
       <Box display={"flex"} flex={"center"} width={"120px"} marginTop={"5px"}>
         <h1>Business Graph</h1>

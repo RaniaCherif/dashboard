@@ -7,7 +7,7 @@ const Container3 = () => {
     <Box
       className="Container_Base Container_Line"
       width={"200px"}
-      height={"85px"}
+      height={"75px"}
     >
       <Box
         display={"flex"}

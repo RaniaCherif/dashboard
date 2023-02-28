@@ -2,11 +2,12 @@ import { ResponsiveBar } from "@nivo/bar";
 
 
 const BarChart = ({ data  }) => (
+      <div style={{ width: "350px", height: "180px" }}>
   <ResponsiveBar
     data={data}
     keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
     indexBy="country"
-    margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+    margin={{ top: 30, right: 90, bottom: 30, left: 30 }}
     padding={0.25}
     innerPadding={1}
     groupMode="grouped"
@@ -19,7 +20,7 @@ const BarChart = ({ data  }) => (
         type: "patternDots",
         background: "inherit",
         color: "#38bcb2",
-        size: 4,
+        size: 3,
         padding: 1,
         stagger: true,
       },
@@ -28,7 +29,7 @@ const BarChart = ({ data  }) => (
         type: "patternLines",
         background: "inherit",
         color: "#eed312",
-        rotation: -45,
+        rotation: -35,
         lineWidth: 6,
         spacing: 10,
       },
@@ -54,16 +55,16 @@ const BarChart = ({ data  }) => (
     axisTop={null}
     axisRight={null}
     axisBottom={{
-      tickSize: 5,
-      tickPadding: 5,
+      tickSize: 2,
+      tickPadding: 2,
       tickRotation: 0,
       legend: "country",
       legendPosition: "middle",
-      legendOffset: 32,
+      legendOffset: 20,
     }}
     axisLeft={{
-      tickSize: 5,
-      tickPadding: 5,
+      tickSize: 2,
+      tickPadding: 3,
       tickRotation: 0,
       legend: "food",
       legendPosition: "middle",
@@ -81,14 +82,14 @@ const BarChart = ({ data  }) => (
         anchor: "bottom-right",
         direction: "column",
         justify: false,
-        translateX: 120,
-        translateY: 0,
+        translateX: 110,
+        translateY: 1,
         itemsSpacing: 10,
-        itemWidth: 100,
-        itemHeight: 10,
+        itemWidth: 90,
+        itemHeight: 8,
         itemDirection: "left-to-right",
         itemOpacity: 0.85,
-        symbolSize: 17,
+        symbolSize: 13,
         effects: [
           {
             on: "hover",
@@ -105,5 +106,6 @@ const BarChart = ({ data  }) => (
       return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
     }}
   />
+  </div>
 );
 export default BarChart;

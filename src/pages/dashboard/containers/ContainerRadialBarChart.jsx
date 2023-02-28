@@ -8,7 +8,7 @@ const ContainerRadialBarChart = () => {
     <Box
       className="Container_Base Container_Line"
       width={"340px"}
-      height={"170px"}
+      height={"185px"}
     >
       <Box display={"flex"} flexDirection={"column"} height={"120px"} width={"70px"} flexWrap={"wrap"}>
         <h1>20 %</h1>

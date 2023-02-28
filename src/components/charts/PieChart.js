@@ -2,7 +2,7 @@ import { ResponsivePie } from "@nivo/pie";
 import { Box } from "@mui/system";
 
 const PieChart = ({ data }) => (
-  <Box width={250} height={170}>
+  <Box width={250} height={180}>
     <ResponsivePie
       data={data}
       margin={{ top: 25, right: 0, bottom: 45, left: 0 }}
