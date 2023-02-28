@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import "./dashboard.css";
 import DiamondOutlinedIcon from "@mui/icons-material/DiamondOutlined";
 
-const Container1 = () => {
+const Container2 = () => {
   return (
     <Box
       className="Container_Base Container_Line"
@@ -37,4 +37,4 @@ const Container1 = () => {
   );
 };
 
-export default Container1;
+export default Container2;

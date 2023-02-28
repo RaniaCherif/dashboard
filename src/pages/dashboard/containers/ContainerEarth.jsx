@@ -4,9 +4,9 @@ import { earthData } from "../../../data/chartData_EarthData";
 const ContainerEarth = () => {
   return (
     <Box
-      className="Container_Base Container_Line"
-      width={"300px"}
-      height={"240px"}
+      className="Container_Base"
+      width={"440px"}
+      height={"370px"}
     >
       <EarthChart data={earthData}></EarthChart>
     </Box>

@@ -2,7 +2,7 @@ import { ResponsiveLine } from "@nivo/line";
 import { Box } from "@mui/system";
 
 const LineChart = ({ data /* see data tab */ }) => (
-  <Box width={500} height={170}>
+  <Box width={500} height={200}>
     <ResponsiveLine
       data={data}
       margin={{ top: 15, right: 65, bottom: 45, left: 50 }}

@@ -13,7 +13,7 @@ import ContainerLine from "./pages/dashboard/containers/ContainerLine";
 import ContainerEarth from "./pages/dashboard/containers/ContainerEarth";
 import Container1 from "./pages/dashboard/containers/Container1";
 import Container2 from "./pages/dashboard/containers/Container2";
-
+import Container3 from "./pages/dashboard/containers/Container3";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,15 +28,26 @@ function App() {
             <main className="content">
               <TopBar setIsSidebar={setIsSidebar} />
 
-              <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
-                <Container1></Container1>
-                <Container2></Container2>
-                <ContainerRadialBarChart></ContainerRadialBarChart>
-                <ContainerRadar></ContainerRadar>
-                <ContainerLine></ContainerLine>
+              <Box display={"flex"} flexWrap={"wrap"} width={"100%"} gap={2}>
                 <ContainerPie></ContainerPie>
+                <ContainerLine></ContainerLine>
+                <Box
+                  display={"flex"}
+                  flexWrap={"wrap"}
+                  alignContent={"flex-start"}
+                  width={"310px"}
+                >
+                  <Container1></Container1>
+                  <Container2></Container2>
+                </Box>
+
+                <Box display={"flex"} flexDirection={"column"}>
+                  <ContainerPie></ContainerPie>
+                  <ContainerRadar></ContainerRadar>
+                </Box>
+
                 <ContainerEarth></ContainerEarth>
-                <ContainerFunnel></ContainerFunnel>
+                <ContainerRadialBarChart></ContainerRadialBarChart>
               </Box>
             </main>
           </div>

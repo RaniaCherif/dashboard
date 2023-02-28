@@ -43,20 +43,20 @@ const EarthChart = ({ data }) => {
   }, [timeLeft]);
 
   return (
-    <Box width={300} height={240}>
-      <div>{timeLeft}</div>
+    <Box width={440} height={370}>
       <ResponsiveChoropleth
+        projectionScale={130}
         forceUpdate
         data={data}
         features={worldFeatures}
-        margin={{ top: 0, right: 150, bottom: 0, left: 0 }}
+        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         colors="PuOr"
         domain={[0, 1000000]}
         unknownColor="#666666"
         label="properties.name"
         valueFormat=".2s"
         projectionType="orthographic"
-        projectionTranslation={[0.5, 0.5]}
+        projectionTranslation={[0.62, 0.5]}
         projectionRotation={rotation}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
