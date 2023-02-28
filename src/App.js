@@ -12,6 +12,8 @@ import { Box } from "@mui/system";
 import ContainerLine from "./pages/dashboard/containers/ContainerLine";
 import ContainerEarth from "./pages/dashboard/containers/ContainerEarth";
 import Container1 from "./pages/dashboard/containers/Container1";
+import Container2 from "./pages/dashboard/containers/Container2";
+
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,6 +30,7 @@ function App() {
 
               <Box className="" style={{ display: "flex", flexWrap: "wrap" }}>
                 <Container1></Container1>
+                <Container2></Container2>
                 <ContainerRadialBarChart></ContainerRadialBarChart>
                 <ContainerRadar></ContainerRadar>
                 <ContainerLine></ContainerLine>

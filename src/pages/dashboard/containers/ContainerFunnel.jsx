@@ -5,7 +5,8 @@ import "./dashboard.css";
 
 const ContainerLine = () => {
   return (
-    <Box className="Container_Base  Container_Line">
+    <Box className="Container_Base  Container_Line" width={150} height={150}>
+
       <FunnelEchart data={funnelData}></FunnelEchart>
     </Box>
   );

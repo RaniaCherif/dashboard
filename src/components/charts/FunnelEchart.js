@@ -2,7 +2,7 @@ import { ResponsiveFunnel } from "@nivo/funnel";
 import { Box } from "@mui/system";
 
 const FunnelEchart = ({ data }) => (
-  <Box width={450} height={250}>
+  <Box width={150} height={150}>
     <ResponsiveFunnel
       data={data}
       margin={{ top: 50, right: 20, bottom: 20, left: 20 }}
