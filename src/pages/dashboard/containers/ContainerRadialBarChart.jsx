@@ -8,9 +8,16 @@ const ContainerRadialBarChart = () => {
     <Box
       className="Container_Base Container_Line"
       width={"340px"}
-      height={"185px"}
+      height={"180px"}
     >
-      <Box display={"flex"} flexDirection={"column"} height={"120px"} width={"70px"} flexWrap={"wrap"}>
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        height={"130px"}
+        width={"70px"}
+        flexWrap={"wrap"}
+        alignSelf={"center"}
+      >
         <h1>20 %</h1>
         <h3>Performance Issues</h3>
 

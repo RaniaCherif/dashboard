@@ -8,7 +8,7 @@ const ContainerBarChart = () => {
     <Box
       className="Container_Base Container_Line"
       width={"340px"}
-      height={"185px"}
+      height={"180px"}
     >
       <BarChart data={BarData}></BarChart>
     </Box>

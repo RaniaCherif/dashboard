@@ -14,6 +14,7 @@ import ContainerBarChart from "./pages/dashboard/containers/ContainerBarChart";
 import Container1 from "./pages/dashboard/containers/Container1";
 import Container2 from "./pages/dashboard/containers/Container2";
 import Container3 from "./pages/dashboard/containers/Container3";
+import Contacts from "./pages/utilities/Contacts";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,7 +29,7 @@ function App() {
             <main className="content">
               <TopBar setIsSidebar={setIsSidebar} />
 
-              <Box display={"flex"} flexWrap={"wrap"} width={"100%"} gap={2}>
+              <Box display={"flex"} flexWrap={"wrap"} width={"100%"} gap={1}>
                 <ContainerPie></ContainerPie>
                 <ContainerLine></ContainerLine>
                 <Box
@@ -46,10 +47,12 @@ function App() {
                   <ContainerRadar></ContainerRadar>
                 </Box>
                 <ContainerEarth></ContainerEarth>
-                <Box display={"flex"} flexDirection={"column"}>
+                <Box display={"flex"} flexDirection={"column"} gap={1} >
                   <ContainerRadialBarChart></ContainerRadialBarChart>
                   <ContainerBarChart></ContainerBarChart>
                 </Box>
+
+                <Contacts></Contacts>
               </Box>
             </main>
           </div>
