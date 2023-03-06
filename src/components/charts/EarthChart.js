@@ -1,50 +1,62 @@
-
 import { ResponsiveChoropleth } from "@nivo/geo";
 import world from "../../data/world_countries.json";
 import { Box } from "@mui/system";
 import { animated, useSpring, config } from "@react-spring/web";
 import { useEffect, useState } from "react";
 
-
-//const Earth = animated(ResponsiveChoropleth);
-
 const EarthChart = ({ data }) => {
   let worldFeatures = world.features;
-
-  /*const props = useSpring({
-    val: 360,
-    config: { duration: 10000 },
-    from: { val: 0 },
-    loop: true,
-    reset: true,
-  });*/
-
-  const t=ResponsiveChoropleth;
 
   const [rotationX, setRotationX] = useState(0);
   const [rotation, setRotation] = useState([0, 0, 0]);
 
+  const Earth = animated(ResponsiveChoropleth);
+  /*------React Spring
+  
+  const rotationTest = useSpring({
+    val: 360,
+    config: { duration: 10000 },
+    from: { val: 0 },
+    to: { val: 360 },
+    loop: true,
+  });
   useEffect(() => {
-    // exit early when we reach 0
+    setRotation([
+      rotationTest.val.interpolate((value) => Math.floor(value)),
+      0,
+      0,
+    ]);
+    //console.log("---------- " + rotationTest.val.interpolate((value) => Math.floor(value)) );
+  }, [rotationTest.val]);*/
+
+  //-------UseEffect with setInterval function animation
+  useEffect(() => {
+    // reset when we reach 360
     if (rotationX === 360) setRotationX(0);
 
-    // save intervalId to clear the interval when the
-    // component re-renders
+    // save intervalId to clear the interval when the component re-renders later
     const intervalId = setInterval(() => {
       setRotationX(rotationX + 1);
-      setRotation([rotationX,0,0]);
+      setRotation([rotationX, 0, 0]);
       this.forceUpdate();
     }, 10);
 
     // clear interval on re-render to avoid memory leaks
     return () => clearInterval(intervalId);
-    // add timeLeft as a dependency to re-rerun the effect
+
+    // add rotationX as a dependency to re-rerun the effect
     // when we update it
   }, [rotationX]);
 
   return (
     <Box width={440} height={370}>
-      <ResponsiveChoropleth
+      {/*<animated.div>
+        {rotationTest.val.interpolate((value) => Math.floor(value))}
+      </animated.div>*/}
+      <Earth
+        projectionRotation={rotation}
+        projectionType="orthographic"
+        projectionTranslation={[0.62, 0.5]}
         projectionScale={130}
         forceUpdate
         data={data}
@@ -55,9 +67,6 @@ const EarthChart = ({ data }) => {
         unknownColor="#666666"
         label="properties.name"
         valueFormat=".2s"
-        projectionType="orthographic"
-        projectionTranslation={[0.62, 0.5]}
-        projectionRotation={rotation}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
         borderWidth={0.5}
