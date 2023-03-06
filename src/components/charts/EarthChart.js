@@ -21,18 +21,18 @@ const EarthChart = ({ data }) => {
 
   const t=ResponsiveChoropleth;
 
-  const [timeLeft, setTimeLeft] = useState(0);
+  const [rotationX, setRotationX] = useState(0);
   const [rotation, setRotation] = useState([0, 0, 0]);
 
   useEffect(() => {
     // exit early when we reach 0
-    if (timeLeft === 360) setTimeLeft(0);
+    if (rotationX === 360) setRotationX(0);
 
     // save intervalId to clear the interval when the
     // component re-renders
     const intervalId = setInterval(() => {
-      setTimeLeft(timeLeft + 1);
-      setRotation([timeLeft,0,0]);
+      setRotationX(rotationX + 1);
+      setRotation([rotationX,0,0]);
       this.forceUpdate();
     }, 10);
 
@@ -40,7 +40,7 @@ const EarthChart = ({ data }) => {
     return () => clearInterval(intervalId);
     // add timeLeft as a dependency to re-rerun the effect
     // when we update it
-  }, [timeLeft]);
+  }, [rotationX]);
 
   return (
     <Box width={440} height={370}>
