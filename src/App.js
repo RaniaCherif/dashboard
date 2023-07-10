@@ -31,7 +31,7 @@ function App() {
 
               <Box display={"flex"} flexWrap={"wrap"} width={"100%"} gap={1}>
                 <ContainerPie></ContainerPie>
-                <ContainerLine></ContainerLine>
+                <ContainerLine className="bibi" test={[10, 20, 12, 52, 27]} ></ContainerLine>
                 <Box
                   display={"flex"}
                   flexWrap={"wrap"}
@@ -52,8 +52,6 @@ function App() {
                   <ContainerRadialBarChart></ContainerRadialBarChart>
                   <ContainerBarChart></ContainerBarChart>
                 </Box>
-
-                <Contacts></Contacts>
               </Box>
             </main>
           </div>
